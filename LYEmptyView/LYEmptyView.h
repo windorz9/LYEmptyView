@@ -11,6 +11,17 @@
 @interface LYEmptyView : LYEmptyBaseView
 
 /**
+ 是否自动显隐EmptyView, default=YES
+ */
+@property (nonatomic, assign) BOOL autoShowEmptyView;
+
+/**
+ 占位图是否完全覆盖父视图， default=NO
+ 当设置为YES后，占位图的backgroundColor默认为浅白色，可自行设置
+ */
+@property (nonatomic, assign) BOOL emptyViewIsCompleteCoverSuperView;
+
+/**
  内容物上每个子控件之间的间距 default is 20.f
  */
 @property (nonatomic, assign) CGFloat  subViewMargin;
@@ -25,15 +36,20 @@
  */
 @property (nonatomic, assign) CGFloat  contentViewY;
 
+/**
+ 是否忽略scrollView的contentInset
+ */
+@property (nonatomic, assign) BOOL ignoreContentInset;
 
-/////////////////////// image
+
+//-------------------------- image --------------------------//
 /**
  图片可设置固定大小 (default=图片实际大小)
  */
 @property (nonatomic, assign) CGSize   imageSize;
 
 
-/////////////////////// titleLab 相关
+//-------------------------- titleLab 相关 --------------------------//
 /**
  标题字体, 大小default is 16.f
  */
@@ -44,7 +60,7 @@
 @property (nonatomic, strong) UIColor  *titleLabTextColor;
 
 
-/////////////////////// detailLab 相关
+//-------------------------- detailLab 相关 --------------------------//
 /**
  详细描述字体，大小default is 14.f
  */
@@ -59,7 +75,7 @@
 @property (nonatomic, strong) UIColor  *detailLabTextColor;
 
 
-/////////////////////// Button 相关
+//-------------------------- Button 相关 --------------------------//
 /**
  按钮字体, 大小default is 14.f
  */
